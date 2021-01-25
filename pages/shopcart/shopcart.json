@@ -1,0 +1,8 @@
+{
+    "defaultTitle": "我的购物车",
+    "pullRefresh": false,
+    "allowsBounceVertical": "NO",
+    "usingComponents": {
+        "goods-item":"../../components/goodsItem/goodsItem"
+    }
+}

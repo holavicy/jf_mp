@@ -1,0 +1,3 @@
+<view class="goods-list">
+  <goods-item a:for="{{list}}" a:for-item="item" goods="{{item}}" type="{{actionType}}"></goods-item>
+</view> 

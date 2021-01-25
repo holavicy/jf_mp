@@ -1,0 +1,19 @@
+<template name="detailItem">
+  <view class="detail-item" key="detailItem">
+    <view class="detail-info-content">
+      <view class="num {{item.BonusPoints>0? type=='A'?'add':'green':'min'}}">
+      <text style="font-size:48rpx">{{item.BonusPoints>0?'+':'-'}}</text>
+        {{item.BonusPoints>0?item.BonusPoints:item.MinusPoints}}
+      </view>
+      <view class="detail-info">
+        <view class="reason">
+          {{item.Reason}}
+        </view>
+        <view class="bottom">
+          <text class="date">考核日期：{{item.AssessmentDate}}</text>
+          <text class="result">{{item.IsAccounted===0? type == 'A'?'未结算':'': type=='A'?'已结算':''}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,19 @@
+<view class="shop-cart">
+  <view class="my-wallet">
+  <view class="left">
+  <image src="../../image/myWallet.png"/>
+  我的钱包</view>
+  <view class="right"><text>{{summaryInfo["现有管理积分"] || 0}}</text>分</view>
+  </view>
+
+  <scroll-view scroll-y="{{true}}" class="goods-list">
+   <goods-item a:for="{{goodsList}}" a:for-item="item" goods="{{item}}" type="{{actionType}}" onNumChange="onNumChange"></goods-item>
+   <navigator url="../../pages/goodsList/goodsList" class="btn-go-exc" a:if="{{goodsList.length==0}}">去选择商品</navigator>
+  </scroll-view>
+  
+
+  <view class="bottom">
+    <view class="left">共计：<text>{{totalNum}}</text>件商品，<text>{{totalPrice}}</text>分</view>
+    <view class="right" onTap="createOrder">立即兑换</view>
+  </view>
+</view>

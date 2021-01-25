@@ -1,0 +1,28 @@
+<import src="../utils/detailItem/detailItem.axml"/>
+<import src="../utils/empty/empty.axml"/>
+
+<view class="detail">
+  <view class="top-total">
+    <view class="type">
+      {{fromType == 0?'可兑换B分':fromType==2?'累计B分管理积分':fromType==3?'年度管理积分':''}}
+    </view>
+    <view class="num">
+      {{ fromType == 0?summaryInfo["现有管理积分"]:fromType==2?summaryInfo["总获得管理积分"]:fromType==3?yearTotalNum:0}}
+    </view>
+  </view>
+
+  <view class="page-section" a:if="{{fromType == 3}}">
+    <picker onChange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="row">
+        <view class="row-title">查询年度</view>
+        <view class="row-extra">{{array[index]}}</view>
+        <image class="row-arrow" src="../../image/arrowDown.png" mode="aspectFill" />
+      </view>
+    </picker>
+  </view>
+
+  <view class="detail-list">
+    <template is="detailItem" a:for="{{list}}" a:for-item="item"  data="{{item,  type: type}}"/>
+  </view>
+  <template is="empty" a:if="{{totalLength==0}}" />
+</view>

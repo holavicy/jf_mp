@@ -1,0 +1,25 @@
+<template name="goodsItem">
+  <view class="goods-item" key="goodsItem">
+    <view class="goods-info-content">
+        <image mode="scaleToFill" src="{{item.PictureUrl}}"/>
+      <view class="goods-info">
+        <view>
+          {{item.Name}}
+        </view>
+        <view>
+          库存：{{item.TotalIn-item.TotalOut}}
+        </view>
+        <view>
+          单价：{{item.PointCost}}分
+        </view>
+      </view>
+    </view>
+
+
+    <view class="actions">
+      <image src="../../../image/min.png"/>
+      {{item.GoodsAmount}}
+      <image src="../../../image/add.png"/>
+    </view>
+  </view>
+</template>

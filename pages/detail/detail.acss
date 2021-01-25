@@ -1,0 +1,22 @@
+@import '../utils/detailItem/detailItem.acss';
+@import '../utils/empty/empty.acss';
+
+.detail{
+    padding-bottom: 20rpx;
+}
+
+.top-total{
+    background: #F03A58;
+    color: #ffffff;
+    height: 92rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 40rpx;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+}
+
+.top-total .num{
+    font-size: 50rpx;
+}

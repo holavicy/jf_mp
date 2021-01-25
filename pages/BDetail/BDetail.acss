@@ -1,0 +1,56 @@
+@import '../utils/detailItem/detailItem.acss';
+@import '../utils/empty/empty.acss';
+
+.detail{
+  padding-bottom: 20rpx;
+}
+.top-total{
+    background: #26C080;
+    color: #ffffff;
+    height: 92rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 40rpx;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+}
+
+.top-total .num{
+    font-size: 50rpx;
+}
+
+.date-radio {
+  padding: 26rpx;
+}
+
+.date-radio label + label {
+  margin-left: 20rpx;
+}
+
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+}
+
+.row-title {
+  flex: 1;
+  padding-top: 28rpx;
+  padding-bottom: 28rpx;
+  font-size: 34rpx;
+  color: #000;
+}
+
+.row-extra {
+  flex-basis: initial;
+  font-size: 32rpx;
+  color: #888;
+}
+
+.row-arrow {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 16rpx;
+}

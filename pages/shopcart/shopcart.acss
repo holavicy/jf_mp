@@ -1,0 +1,87 @@
+.shop-cart{
+    background: #F2F2F2;
+    height: 100vh;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.my-wallet{
+    background: #ffffff;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28rpx;
+    padding: 0 10px;
+}
+
+.my-wallet .left{
+    display: flex;
+    align-items: center;
+}
+
+.my-wallet .right text{
+    font-size: 36rpx;
+    color: #1E82D2;
+}
+
+.my-wallet image{
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.goods-list{
+    position: absolute;
+    top: 70px;
+    bottom: 60px;
+    background: #ffffff;
+    left: 0;
+    right: 0;
+}
+
+.bottom{
+    position: absolute;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom .right{
+    width: 220rpx;
+    height: 100%;
+    font-size: 36rpx;
+    font-weight: bold;
+    background: #1E82D2;
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+}
+
+.bottom .left{
+    padding-left: 10px;
+}
+
+.bottom .left text{
+    color: #1E82D2;
+    font-size: 36rpx;
+    margin: 0 6px;
+}
+
+.btn-go-exc{
+      width: 260rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background: #1E82D2;
+  border-radius: 8rpx;
+  margin: 200rpx auto 0;
+  font-size: 32rpx;
+  color: #fff;
+}

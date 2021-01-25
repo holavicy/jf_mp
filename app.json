@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shopcart/shopcart",
+    "pages/my/my",
+    "pages/utils/goodsItem/goodsItem",
+    "pages/detail/detail",
+    "pages/BDetail/BDetail",
+    "pages/utils/detailItem/detailItem",
+    "pages/goodsList/goodsList",
+    "pages/utils/empty/empty",
+    "pages/activityInfo/activityInfo",
+    "pages/fixDetail/fixDetail",
+    "pages/orderList/orderList",
+    "pages/orderInfo/orderInfo"
+  ],
+  "window": {
+    "defaultTitle": "积分管理系统"
+  },
+  "tabBar": {
+    "textColor": "#404040",
+    "selectedColor": "#108ee9",
+    "backgroundColor": "#F5F5F9",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "icon": "image/home.png",
+        "activeIcon": "image/homeHL.png",
+        "name": "首页"
+      },
+      {
+        "pagePath": "pages/shopcart/shopcart",
+        "icon": "image/cart.png",
+        "activeIcon": "image/cartHL.png",
+        "name": "购物车"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "icon": "image/my.png",
+        "activeIcon": "image/myHL.png",
+        "name": "我的"
+      }
+    ]
+  },
+  "debug": true
+}

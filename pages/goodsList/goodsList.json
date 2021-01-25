@@ -1,0 +1,9 @@
+{
+    "defaultTitle": "商品列表",
+    "pullRefresh": true,
+    "allowsBounceVertical": "YES",
+    "usingComponents": {
+        "goods-item":"../../components/goodsItem/goodsItem"
+    }
+
+}

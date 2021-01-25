@@ -1,0 +1,4 @@
+page{
+    font: 12px/1.5 Tahoma,Helvetica,Arial,'宋体',sans-serif;
+    color: #101010;
+}

@@ -1,0 +1,30 @@
+ <view class="goods-item" key="goodsItem">
+    <view class="goods-info-content">
+        <image mode="scaleToFill" src="{{'http://'+domain+goods.PictureUrl}}"  onTap="viewImage" data-img="{{goods.PictureUrl}}"/>
+      <view class="goods-info">
+        <view>
+          {{goods.Name}}
+        </view>
+        <view a:if="{{type ==1 || type == 2}}">
+          库存：{{goods.TotalIn-goods.TotalOut - goods.TotalLock}}
+        </view>
+        <view class="price">
+          <text><text class="price-text">{{goods.PointCost}}</text>积分{{goods.MeasureUnit?'/'+goods.MeasureUnit:''}}</text>
+          <text a:if="{{type == 3}}">×{{goods.OrderGoodsAmount}}</text>
+        </view>
+      </view>
+    </view>
+
+
+    <!-- 购物车页面 -->
+    <view class="actions" a:if="{{type === 1}}">
+      <image src="../../../image/min.png" onTap="editNum" data-type="min" />
+      {{goods.GoodsAmount}}
+      <image src="../../../image/add.png" onTap="editNum" data-type="add" />
+    </view>
+
+    <!-- 商品列表页面 -->
+    <view class="actions" a:if="{{type === 2}}">
+      <image src="../../../image/add.png" onTap="addCart" data-goodsid="{{goods.GoodsID}}"/>
+    </view>
+  </view>

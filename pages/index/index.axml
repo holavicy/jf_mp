@@ -1,0 +1,48 @@
+<view class="home">
+  <view class="top-wrapper">
+    <navigator url="../../pages/detail/detail?type=0" class="top-item border-right">
+      <view class="num">{{summaryInfo["现有A分"] || 0}}</view>
+      <view>可兑换A分</view>
+    </navigator>
+    
+    <navigator url="../../pages/detail/detail?type=2" class="top-item">
+      <view class="num">{{summaryInfo["总获得A分"] || 0}}</view>
+      <view>累计A分</view>
+    </navigator>
+  </view>
+  <view class="top-wrapper">
+    <view class="top-item border-right">
+      <view class="num">{{summaryInfo["现有管理积分"] || 0}}</view>
+      <view>可兑换B分</view>
+    </view>
+    
+    <view class="top-item">
+        <view class="num">{{summaryInfo["已兑换积分"] || 0}}</view>
+        <view>已兑换B分</view>
+    </view>
+  </view>
+  <view class="top-wrapper">
+    <navigator url="../../pages/BDetail/BDetail?type=2" class="top-item">
+      <view class="num">{{summaryInfo["总获得管理积分"] || 0}}</view>
+      <view>累计B分管理积分</view>
+    </navigator>
+  </view>
+  <view class="top-wrapper align">
+    <navigator url="../../pages/goodsList/goodsList" class="to-goods-list">积分兑换>></navigator>
+    <view class="info">积极参加公司组织的活动，可以获取更多积分哦</view>
+  </view>
+  
+  <view class="bottom-wrapper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}">
+    <block a:for="{{activityList}}">
+      <swiper-item class="swiper-item-wrapper">
+      <navigator  url="../../pages/activityInfo/activityInfo?id={{item.ActivitiesID}}">
+        <image class="picture" src="{{item.PictureUrl}}"/>
+        <view class="swiper-item-slogan">{{item.Slogan}}</view>
+      </navigator>
+        
+      </swiper-item>
+    </block>
+  </swiper>
+  </view>
+</view>

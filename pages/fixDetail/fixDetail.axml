@@ -1,0 +1,105 @@
+<view class="fix-detail">
+  <view class="top-total">
+    <view class="type">固定积分</view>
+    <view class="num">
+      {{summaryInfo["固定积分"]}}
+    </view>
+  </view>
+  <!-- 职务积分 -->
+  <view class="item-wrapper">
+    <view class="title" onTap="triggerDetail" data-type="zw">
+
+     <view class="left">
+       <image src="../../image/zw.png"/>
+       <text>职务积分</text>
+     </view> 
+     <view class="right">
+      <text>{{detaiInfo["totalZW"]}}</text>
+      <image src="../../image/arrowDown.png"/>
+     </view>
+
+    </view>
+
+    <view class="detail" a:if="{{zwShow}}">
+      <view class="detail-item zw-item" a:for="{{zwList}}" a:for-item="item">
+        <text>{{item.begindate}}——{{item.enddate}}\n{{item.jobname}}({{item.jobrank}})</text>
+        <text class="right">{{item.jobrankpoint}}</text>
+      </view>
+    </view>
+
+  </view>
+  <!-- 职称积分 -->
+  <view class="item-wrapper">
+    <view class="title" onTap="triggerDetail" data-type="zc">
+
+     <view class="left">
+       <image src="../../image/zc.png"/>
+       <text>职称积分</text>
+     </view> 
+     <view class="right">
+      <text>{{detaiInfo["职称积分"]["tittleRankPoint"]}}</text>
+      <image src="../../image/arrowDown.png"/>
+     </view>
+
+    </view>
+
+    <view class="detail" a:if="{{zcShow}}">
+      <view class="detail-item">
+        <text a:if="{{detaiInfo['职称积分'].tectittle}}">{{detaiInfo["职称积分"].tectittle}}（{{detaiInfo["职称积分"].tittleRank}}）</text>
+        <text a:else>暂无职称</text>
+        <text class="right">{{detaiInfo["职称积分"].tittleRankPoint}}</text> 
+    </view>
+    </view>
+
+  </view>
+  <!-- 学历积分 -->
+  <view class="item-wrapper">
+    <view class="title" onTap="triggerDetail" data-type="xl">
+
+     <view class="left">
+       <image src="../../image/xl.png"/>
+       <text>学历积分</text>
+     </view> 
+     <view class="right">
+      <text>{{detaiInfo["学历积分"]["schoolPoints"]}}</text>
+      <image src="../../image/arrowDown.png"/>
+     </view>
+
+    </view>
+
+    <view class="detail" a:if="{{xlShow}}">
+      <view class="detail-item">
+        <text>{{detaiInfo["学历积分"].education}}{{detaiInfo["学历积分"].education == '本科'?(detaiInfo["学历积分"].is985211?'（985/211）':'（普通）'):''}}</text>
+        <text class="right">{{detaiInfo["学历积分"]["schoolPoints"]}}</text>
+      </view>
+      
+    </view>
+
+  </view>
+  <!-- 工龄积分 -->
+  <view class="item-wrapper">
+    <view class="title" onTap="triggerDetail" data-type="gl">
+
+     <view class="left">
+       <image src="../../image/gl.png"/>
+       <text>工龄积分</text>
+     </view> 
+     <view class="right">
+      <text>{{detaiInfo["工龄积分"]["servingAgePoints"]}}</text>
+      <image src="../../image/arrowDown.png"/>
+     </view>
+
+    </view>
+
+    <view class="detail" a:if="{{glShow}}">
+    <view class="detail-item">
+      <text>
+      {{detaiInfo["工龄积分"].servingAge_years>0?detaiInfo["工龄积分"].servingAge_years:''}}{{detaiInfo["工龄积分"].servingAge_years>0?'*2000':''}}{{detaiInfo["工龄积分"].servingAge_years>0&&detaiInfo["工龄积分"].servingAge_months>0?'+':''}}{{detaiInfo["工龄积分"].servingAge_months>0?(detaiInfo["工龄积分"].servingAge_months)+'/12*2000':''}}</text>
+      <text class="right">入职日期：{{detaiInfo["工龄积分"]["begindate"]}}</text> 
+    </view>
+      
+      
+    </view>
+
+  </view>
+</view>

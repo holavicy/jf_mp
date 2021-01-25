@@ -1,0 +1,32 @@
+<view class="activity-info">
+  <image class="picture" mode="scaleToFill" src="{{info.PictureUrl}}"/>
+  <view class="info-item">
+    <view class="title">
+      <view class="icon red"></view>
+      <text>时间</text>
+    </view>
+    <view class="detail">
+      {{info.BeginDateTime}}-{{info.EndDateTime}}
+    </view>
+  </view>
+
+  <view class="info-item">
+    <view class="title">
+      <view class="icon green"></view>
+      <text>内容</text>
+    </view>
+    <view class="detail">
+      {{info.ActivityContent}}
+    </view>
+  </view>
+
+  <view class="info-item">
+    <view class="title">
+      <view class="icon blue"></view>
+      <text>奖惩</text>
+    </view>
+    <view class="detail">
+      {{info.RewardAndPenalties}}
+    </view>
+  </view>
+</view>

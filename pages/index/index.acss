@@ -1,0 +1,78 @@
+.home{
+    background: #F2F2F2;
+    box-sizing: border-box;
+    height: 100vh;
+    padding-top: 30rpx;
+    box-sizing: border-box;
+}
+
+.home .swiper-item-slogan{
+    display: block;
+    padding: 20rpx 0 0 20rpx;
+    position: absolute;
+    top: 20rpx;
+    left: 20rpx;
+}
+.swiper-item-wrapper .picture{
+    display: block;
+    height: 200rpx;
+    width: 750rpx;
+}
+.home .top-wrapper{
+    background: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30rpx;
+    padding: 20rpx 0;
+}
+
+.home .top-wrapper.align{
+    flex-direction: column;
+}
+
+.top-item{
+    text-align: center;
+    width: 50%;
+}
+
+.top-item.border-right{
+    border-right: 1rpx solid #E5E5E5;
+}
+
+.top-item .num{
+    font-size: 24px;
+    line-height: 36px;
+    color: #1E82D2
+}
+
+.top-item .num.red{
+    color: #F03A58
+}
+
+.top-item .num.green{
+    color: #26C080
+}
+
+.info{
+    color: #CCCCCC;
+    font-size: 28rpx;
+    text-align: center;
+    margin: 10rpx 0
+}
+
+.to-goods-list{
+    color: #1E82D2;
+    font-size: 32rpx;
+    text-align: center;
+    text-decoration: underline;}
+
+.bottom-wrapper{
+    margin-top: 40px;
+}
+
+.test{
+    background-image: url(http://119.45.33.38:8080/images/dd/2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

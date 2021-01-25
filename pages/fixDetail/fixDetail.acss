@@ -1,0 +1,64 @@
+.fix-detail{
+    font-size: 28rpx;
+}
+
+.top-total{
+    background: #26C080;
+    color: #ffffff;
+    height: 92rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 40rpx;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+}
+
+.top-total .num{
+    font-size: 50rpx;
+}
+
+.item-wrapper .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 110rpx;
+    padding: 0 20rpx;
+    border-bottom: 1rpx solid #E5E5E5;
+    font-size: 34rxp;
+}
+
+.item-wrapper .detail{
+    padding: 20rpx;
+}
+
+.item-wrapper .title .left, .item-wrapper .title .right{
+    display: flex;
+    align-items: center;
+}
+
+.item-wrapper .title .left image{
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 20rpx;
+}
+
+.item-wrapper .title .right image{
+    width: 32rpx;
+    height: 32rpx;
+    margin-left: 20rpx;
+}
+
+.detail-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-item .right{
+    width: 300rpx;
+    flex-shrink: 0;
+    flex-grow: 0;
+    text-align: right;
+    padding-right: 52rpx;
+}

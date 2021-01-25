@@ -1,0 +1,18 @@
+<import src="../utils/detailItem/detailItem.axml"/>
+<import src="../utils/empty/empty.axml"/>
+
+<view class="detail">
+  <view class="top-total">
+    <view class="type">
+      {{isAccounted === 0?'可兑换A分':'累计A分'}}
+    </view>
+    <view class="num">
+      {{ isAccounted === 0?summaryInfo["现有A分"]:summaryInfo["总获得A分"]}}
+    </view>
+  </view>
+
+  <view class="detail-list">
+    <template is="detailItem" a:for="{{list}}" a:for-item="item"  data="{{item, type:type}}"/>
+  </view>
+  <template is="empty" a:if="{{totalLength==0}}" />
+</view>

@@ -1,0 +1,12 @@
+<view class="goods-list">
+  <goods-item a:for="{{list}}" a:for-item="item" goods="{{item}}" type="{{actionType}}" onViewImg="onViewImg" onAddCart="addCart"></goods-item>
+
+  <view class="float-wrapper" onTap="navigate">
+    <image mode="scaleToFill" src="../../image/cartFloat.png"/>
+    <view class="cart-num">{{cartNum}}</view>
+  </view>
+
+  <view class="img-big-wrapper" a:if="{{showImg}}" onTap="hideImg">
+    <image mode="widthFix" src="{{currentImg}}"/>
+  </view>
+</view>

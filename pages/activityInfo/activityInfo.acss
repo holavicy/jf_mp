@@ -1,0 +1,46 @@
+page{
+    background: #ffffff;
+}
+
+.activity-info .picture{
+    display: block;
+    width: 100%;
+    height: 400rpx;
+}
+
+.info-item{
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+
+.info-item .icon{
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 50%;
+    margin-right: 12rpx;
+}
+
+.info-item .icon.red{
+    background-color: #FF2D55;
+}
+
+.info-item .icon.green{
+    background-color: #26C080;
+}
+
+.info-item .icon.blue{
+    background-color: #1E82D2;
+}
+
+.info-item .title{
+    display: flex;
+    align-items: center;
+    font-size: 28rpx;
+}
+
+.info-item .detail{
+    padding-left: 26rpx;
+    color: #CCCCCC;
+    font-size: 24rpx;
+    margin-top: 20rpx;
+}

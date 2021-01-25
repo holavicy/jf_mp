@@ -1,0 +1,30 @@
+<import src="../utils/empty/empty.axml"/>
+
+<view class="order-list-wrapper">
+  <view class="tabs">
+    <view class="tabs-item {{orderStatus===item.key?'active':''}}" a:for="{{statusList}}" a:for-item="item" onTap="setStatus" data-key="{{item.key}}">
+      {{item.text}}
+    </view>
+  </view>
+
+  <view class="order-list">
+    <view class="item" a:for="{{list}}" a:for-item="item">
+      <view class="top-info">
+        <view>订单号：{{item.PointOrderID}}</view>
+        <view style="color:#1E82D2"> {{orderStatusDic[item.OrderStatus]}}</view>
+      </view>
+
+      <view class="center-info">
+        <view style="text-align:right">共{{item.TotalNum}}件商品，合计：<text style="color:#1E82D2;margin-right:6rpx">{{item.TotalPrice}}</text>积分</view>
+      </view>
+      
+      <view class="actions">
+        <navigator url="../../pages/orderInfo/orderInfo?id={{item.PointOrderID}}" class="btn" a:if="{{item.TotalNum>0}}">查看商品</navigator>
+        <view class="btn" a:if="{{item.OrderStatus == 2}}" onTap="finishOrder" data-id="{{item.PointOrderID}}">确认收货</view>
+      </view>
+    </view>
+
+    <template is="empty" a:if="{{totalLength==0}}" />
+  </view>
+</view>
+

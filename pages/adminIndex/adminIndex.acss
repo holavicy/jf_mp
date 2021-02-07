@@ -1,38 +1,13 @@
-.my{
+.admin-index{
     background: #F2F2F2;
     height: 100vh;
-    padding-top: 20px;
-    box-sizing: border-box;
 }
 
 .my-wrapper{
-    background: #ffffff;
     text-align: center;
     display: flex;
-}
-
-.my-wrapper.border-bottom{
-    border-bottom: 1rpx solid #E5E5E5;
-}
-
-.my-wrapper.margin-top{
-    margin-top: 40rpx;
-}
-
-.my-wrapper .item{
-    flex-grow: 1;
-    height: 130rpx;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 24rpx;
-}
-
-.item .num{
-    font-size: 40rpx;
-    color: #1E82D2;
-    margin-bottom: 6rpx;
+    padding-top: 20rpx;
 }
 
 .my-wrapper .line-item{
@@ -65,13 +40,4 @@ image.right{
     align-items: center;
     font-size: 32rpx;
     color: #101010;
-}
-
-.flex-column{
-    display: flex;
-    flex-direction: column;
-}
-
-.background-gray{
-    background: rgb(242, 242, 242)
 }

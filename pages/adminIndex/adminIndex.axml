@@ -1,0 +1,21 @@
+<view class="admin-index">
+  <view class="my-wrapper">
+    <navigator url="../../pages/staffJFSummary/staffJFSummary" class="line-item">
+      <view class="left-wrapper">
+        <image class="left" mode="scaleToFill" src="../../image/admin_jf.png"/>
+      所有员工积分信息
+      </view>
+ 
+      <image class="right" mode="scaleToFill" src="../../image/arrowRight.png"/>
+    </navigator>
+
+    <navigator url="../../pages/staffOrder/staffOrder" class="line-item">
+      <view class="left-wrapper">
+        <image class="left" mode="scaleToFill" src="../../image/admin_order.png"/>
+      所有员工兑换记录
+      </view>
+ 
+      <image class="right" mode="scaleToFill" src="../../image/arrowRight.png"/>
+    </navigator>
+  </view>
+</view>

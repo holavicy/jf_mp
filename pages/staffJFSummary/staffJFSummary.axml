@@ -1,0 +1,63 @@
+<import src="../utils/empty/empty.axml"/>
+
+<view class="staff-jf-summary">
+  <view class="search-wrapper">
+    <view class="search-item">
+      <view class="label">
+        工号
+      </view>
+      <input onInput="setStaffNo" />
+    </view>
+    <view class="search-item">
+      <view class="label">
+        姓名
+      </view>
+      <input onInput="setStaffName" />
+    </view>
+    <image mode="scaleToFill" src="../../image/search.png" onTap="search"/>
+  </view>
+
+  <view class="list-wrapper">
+    <view class="staff-item" a:for="{{list}}" a:for-item="staff">
+      <view class="staff-info-line name">
+        <view>{{staff['姓名']}}（{{staff['工号']}}）</view>
+      </view>
+
+      <view class="staff-info-line">
+        <view class="dep">
+        {{staff['组织']}}
+        {{staff['DEP1']}}
+        {{staff['DEP2']}}</view>
+      </view>
+
+      <view class="staff-info-line score">
+        <view class="score-item"><text class="label">现有A分:</text><text class="value">{{staff['现有A分']}}</text></view>
+        <view class="score-item"><text class="label">可兑换积分:</text><text class="value">{{staff['现有管理积分']}}</text></view>
+      </view>
+
+      <view class="staff-info-line score">
+        <view class="score-item"><text class="label">已兑换积分:</text><text class="value">{{staff['已兑换积分']}}</text></view>
+        <view class="score-item"><text class="label">固定积分:</text><text class="value">{{staff['固定积分']}}</text></view>
+      </view>
+
+      <view class="staff-info-line score">
+        <view class="score-item"><text class="label">年度管理积分:</text><text class="value">{{staff['年度管理积分']}}</text></view>
+        <view class="score-item"><text class="label">年度累计积分:</text><text class="value">{{staff['年度累计积分']}}</text></view>
+      </view>
+
+      <view class="staff-info-line score">
+        <view class="score-item"><text class="label">总获得A分:</text><text class="value">{{staff['总获得A分']}}</text></view>
+        <view class="score-item"><text class="label">总获得B管理积分:</text><text class="value">{{staff['总获得管理积分']}}</text></view>
+      </view>
+
+      <view class="staff-info-line score">
+        <view class="score-item"><text class="label">总累计积分:</text><text class="value">{{staff['总累计积分']}}</text></view>
+        <!-- <view class="score-item"><text class="label">现有管理积分:</text><text class="value">{{staff['现有管理积分']}}</text></view> -->
+      </view>
+    </view>
+
+     <template is="empty" a:if="{{totalLength==0}}" />
+  </view>
+
+
+</view>

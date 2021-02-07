@@ -27,9 +27,9 @@ Page({
         console.log(333333)
         dd.setStorage({
           key: 'staffno',
-          // data: res.data.data.jobnumber
+          data: res.data.data.jobnumber
           // data: '100236'
-          data:'100017'
+          // data:'100017'
         });
         dd.setStorage({
           key: 'name',

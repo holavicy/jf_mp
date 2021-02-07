@@ -42,11 +42,20 @@
     </view>
   </view>
 
-  <view class="my-wrapper margin-top">
+  <view class="my-wrapper margin-top flex-column background-gray">
     <navigator url="../../pages/orderList/orderList" class="line-item">
       <view class="left-wrapper">
         <image class="left" mode="scaleToFill" src="../../image/exchange.png"/>
       我的兑换记录
+      </view>
+ 
+      <image class="right" mode="scaleToFill" src="../../image/arrowRight.png"/>
+    </navigator>
+
+    <navigator url="../../pages/adminIndex/adminIndex" class="line-item" a:if="{{isAdmin == 1}}">
+      <view class="left-wrapper">
+        <image class="left" mode="scaleToFill" src="../../image/admin.png"/>
+      管理员中心
       </view>
  
       <image class="right" mode="scaleToFill" src="../../image/arrowRight.png"/>

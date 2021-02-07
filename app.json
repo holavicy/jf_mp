@@ -12,7 +12,10 @@
     "pages/activityInfo/activityInfo",
     "pages/fixDetail/fixDetail",
     "pages/orderList/orderList",
-    "pages/orderInfo/orderInfo"
+    "pages/orderInfo/orderInfo",
+    "pages/adminIndex/adminIndex",
+    "pages/staffJFSummary/staffJFSummary",
+    "pages/staffOrder/staffOrder"
   ],
   "window": {
     "defaultTitle": "积分管理系统"

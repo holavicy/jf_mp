@@ -3,10 +3,19 @@ import { getStorage } from '../tool.js';
 
 Page({
   data: {
-    summaryInfo: null
+    summaryInfo: null,
+    isAdmin: 0
   },
   onShow() {
     this.getSummary();
+
+    let key = 'isAdmin'
+
+    getStorage(key).then((res) => {
+      this.setData({
+        isAdmin: res
+      })
+    })
   },
 
   getSummary() {

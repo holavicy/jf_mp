@@ -205,7 +205,7 @@ Page({
   },
 
   // 退回订单
-  rejectOrder () {
+  rejectOrder (e) {
      let id = e.target.dataset.id;
 
     let data = {

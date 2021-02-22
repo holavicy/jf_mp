@@ -4,10 +4,13 @@ import { getStorage } from '../tool.js';
 Page({
   data: {
     summaryInfo: null,
-    isAdmin: 0
+    isAdmin: 0,
+    rankB: '--',
+    rankBfix: '--',
+    rankAll: '--'
   },
   onShow() {
-    this.getSummary();
+    this.getSummary()
 
     let key = 'isAdmin'
 
@@ -33,7 +36,47 @@ Page({
         this.setData({
           summaryInfo: res.data.detail[0]
         })
+        this.getScoreSummary()
       })
     })
   },
+
+  getScoreSummary() {
+    let url = '/query_RewardPointSummary'
+    let data = {
+      onduty: 0
+      }
+    post(url, data).then(res => {
+      console.log('get all data')
+      let summaryInfo = this.data.summaryInfo
+      console.log(this.data.summaryInfo)
+      let allData = res.data.detail
+      let rankB = 1
+      let rankBfix = 1
+      let rankAll = 1
+      allData.map(item => {
+        if (item['年度累计积分'] > summaryInfo['年度累计积分']) {
+          rankB ++
+        }
+
+        if (item['固定积分'] > summaryInfo['固定积分']) {
+          rankBfix ++
+        }
+
+        if (item['总累计积分'] > summaryInfo['总累计积分']) {
+          rankAll ++
+        }
+      })
+
+      console.log(rankB)
+      console.log(rankBfix)
+      console.log(rankAll)
+      this.setData({
+        rankB: rankB,
+        rankBfix: rankBfix,
+        rankAll: rankAll
+      })
+
+    })
+  }
 });

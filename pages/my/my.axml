@@ -1,5 +1,12 @@
 <view class="my">
 
+  <!-- <view class="my-wrapper border-bottom">
+    <view class="item">
+        <view class="num">{{summaryInfo["年度累计积分"] || 0}}</view>
+        <view>个人积分合计排名</view>
+    </view>
+  </view> -->
+
   <!-- <view class="my-wrapper">
      <navigator url="../../pages/detail/detail?type=2" class="item">
         <view class="num">{{summaryInfo["总获得A分"] || 0}}</view>
@@ -39,6 +46,21 @@
      <view class="item">
         <view class="num">{{summaryInfo["总累计积分"] || 0}}</view>
         <view>总累计B分=总累计B分管理积分+固定积分</view>
+    </view>
+  </view>
+
+  <view class="my-wrapper margin-top">
+    <view class="item">
+        <view class="num">{{rankB}}</view>
+        <view>本年度累计B分排名</view>
+    </view>
+    <view class="item">
+        <view class="num">{{rankBfix}}</view>
+        <view>本年度B分固定积分排名</view>
+    </view>
+    <view class="item">
+        <view class="num">{{rankAll}}</view>
+        <view>总累计B分</view>
     </view>
   </view>
 

@@ -44,6 +44,16 @@ App({
     // Authorization: token,
               }
 
+              dd.setStorage({
+                        key: 'isAdmin',
+                        data: 0
+                      });
+
+              dd.setStorage({
+                        key: 'isLeader',
+                        data: 0
+                      });
+
               res.data.data.roles.map((item) => {
                     if (item.id === 1505687807) {
                       dd.setStorage({

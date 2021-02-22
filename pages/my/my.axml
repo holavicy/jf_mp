@@ -52,11 +52,11 @@
   <view class="my-wrapper margin-top">
     <view class="item">
         <view class="num">{{rankB}}</view>
-        <view>本年度累计B分排名</view>
+        <view>年度管理积分排名</view>
     </view>
     <view class="item">
         <view class="num">{{rankBfix}}</view>
-        <view>本年度B分固定积分排名</view>
+        <view>总获得管理积分排名</view>
     </view>
     <view class="item">
         <view class="num">{{rankAll}}</view>

@@ -55,11 +55,11 @@ Page({
       let rankBfix = 1
       let rankAll = 1
       allData.map(item => {
-        if (item['年度累计积分'] > summaryInfo['年度累计积分']) {
+        if (item['年度管理积分'] > summaryInfo['年度管理积分']) {
           rankB ++
         }
 
-        if (item['固定积分'] > summaryInfo['固定积分']) {
+        if (item['总获得管理积分'] > summaryInfo['总获得管理积分']) {
           rankBfix ++
         }
 
